@@ -1,0 +1,35 @@
+; for all files
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+
+; Indentation override for all Markdown files
+[*.md]
+indent_style = tab
+indent_size = 2
+
+; Indentation override for all HTML files
+[*.html]
+indent_style = tab
+indent_size = 2
+ 
+; Indentation override for all CSS files
+[*.css]
+indent_style = tab
+indent_size = 2
+
+; Indentation override for all Sass files Sass
+[*.sass]
+indent_style = tab
+indent_size = 2
+ 
+; Indentation override for all SCSS files
+[*.scss]
+indent_style = tab
+indent_size = 2
+ 
+; Indentation override for all Js files
+[*.js]
+indent_style = tab
+indent_size = 2
