@@ -5,7 +5,7 @@ end_of_line = lf
 insert_final_newline = true
 
 ;dev files
-[*.{md, html, css, sass, scss, js}]
+[*]
 indent_style = tab
 indent_size = 2
 insert_final_newline = true
