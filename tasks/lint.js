@@ -7,6 +7,7 @@ let files = [
   'src/js/**/*.js',
   'gulpfile.js',
   'tasks/*.js',
+  '.eslintrc.js',
 ];
 
 gulp.task('lint', lintTask);
