@@ -9,9 +9,9 @@ gulp.task('js', jsTask);
 
 function jsTask() {
   return gulp
-  	.src(['src/js/**/*.js'])
-		.pipe(plumber())
-		.pipe(uglify())
-		.pipe(gulp.dest('build/js'))
-		.pipe(notify('JS nice!'));
+    .src(['src/js/**/*.js'])
+    .pipe(plumber())
+    .pipe(uglify())
+    .pipe(gulp.dest('build/js'))
+    .pipe(notify('JS nice!'));
 };
