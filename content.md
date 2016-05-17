@@ -1,5 +1,5 @@
 # Textos do site ABCDev
-Textos do site ABCDev para que ninguém ter que digitar novamente.
+Textos do site ABCDev.
 
 ##Header
 **Banner**
