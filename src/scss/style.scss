@@ -119,6 +119,7 @@ section {
   padding: 4vw;
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   a{
     color: $text-yellow;
   }
@@ -129,29 +130,24 @@ section#programacao{ height: auto !important;}
 section:nth-of-type(odd) {
   @extend .shadow;
 }
-section:nth-child(6) {
+section:nth-child(4) {
   background-image: url('../images/parque-chico-mendes-scs.jpg');
-  background-attachment: fixed;
+  background-position: center top;
+}
+section:nth-child(6) {
+  background-image: url('../images/parque-escola-sabina-sto-andre.jpg');
   background-position: center top;
 }
 section:nth-child(8) {
-  background-image: url('../images/parque-escola-sabina-sto-andre.jpg');
-  background-attachment: fixed;
-  background-position: center top;
+  background-image: url('../images/parque-dos-menimos-sbc.jpg');
+  background-position: center bottom;
 }
 section:nth-child(10) {
-  background-image: url('../images/parque-dos-menimos-sbc.jpg');
-  background-attachment: fixed;
+  background-image: url('../images/maps.png');
   background-position: center bottom;
 }
 section:nth-child(12) {
-  background-image: url('../images/maps.png');
-  background-attachment: fixed;
-  background-position: center bottom;
-}
-section:nth-child(14) {
   background-image: url('../images/praca-da-moca-diadema.jpg');
-  background-attachment: fixed;
   background-position: center bottom;
 }
 #local{
