@@ -1,0 +1,317 @@
+@import '_open-sans-webfont.scss';
+@import '_antonio-webfont.scss';
+@import '_variables.scss';
+@import '_mixins.scss';
+@import '_text.scss';
+
+
+header{
+  height: 92vh;
+  padding: 4.5% 0 5% 0;
+  font-family: 'antoniobold', Helvetica, Arial, Sans-serif;
+  color: $white;
+  text-align: center;
+  background-image: url('../images/igreja-matriz-sbc.jpg');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-attachment: fixed;
+  background-size: cover;
+  .subtitle{
+    margin-bottom: .5em;
+    font-size: 2.4em;
+    font-weight: lighter;
+    line-height: 1.2em;
+    color: $white;
+  }
+  img{
+    margin-bottom: 2em;
+  }
+
+}
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  padding: .5% 0 .3% 0;
+  background-color: $grey;
+  @extend .shadow;
+  ul{
+    li{ display: inline-block;}
+  }
+  .logo,
+  .socials{
+    margin: 0 2% 0 2%;
+    li{
+      margin: 0 1em 0 1em;
+    }
+  }
+}
+.main-menu{
+  font-family: 'antonioregular';
+  font-size: 1.2em;
+  text-transform: uppercase;
+  li{
+    margin: 0 1em 0 1em;
+    line-height: 50%;
+  }
+  a{
+    display: flex;
+    color: $text-brown;
+    text-decoration: none;
+  }
+}
+.wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 70%;
+  margin: 0 auto;
+
+}
+.date-time{
+  //margin: 2em 0 2em 0;
+}
+.locale{
+  margin-bottom: 1.2em;
+  font-family: 'antoniolight';
+  font-size: 1.4em;
+  font-weight: lighter;
+  line-height: 1.2em;
+  color: $white;
+}
+
+.button-action{
+  @extend .button;
+  color: $white;
+  background: $yellow;
+}
+
+.button-action_big{
+  @extend .button-action;
+  font-size: 1.85em;
+}
+
+.button-action_line{
+  @extend .button;
+  font-size: 1.05em;
+  color: $text-yellow;
+  background: $white;
+  border: medium solid $text-yellow;
+}
+.fixed {
+  z-index: 20;
+  position: fixed;
+  top: 0 !important;
+}
+.subtitle{
+  margin-bottom: 1em;
+  font-family: 'antoniolight';
+  font-size: 1.6em;
+  line-height: 1.2em;
+  color: $brown;
+}
+/** **/
+section {
+  height: 100vh;
+  padding: 4vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  a{
+    color: $text-yellow;
+  }
+}
+section#inscreva-se,
+section#palestrantes,
+section#programacao{ height: auto !important;}
+section:nth-of-type(odd) {
+  @extend .shadow;
+}
+section:nth-child(6) {
+  background-image: url('../images/parque-chico-mendes-scs.jpg');
+  background-attachment: fixed;
+  background-position: center top;
+}
+section:nth-child(8) {
+  background-image: url('../images/parque-escola-sabina-sto-andre.jpg');
+  background-attachment: fixed;
+  background-position: center top;
+}
+section:nth-child(10) {
+  background-image: url('../images/parque-dos-menimos-sbc.jpg');
+  background-attachment: fixed;
+  background-position: center bottom;
+}
+section:nth-child(12) {
+  background-image: url('../images/maps.png');
+  background-attachment: fixed;
+  background-position: center bottom;
+}
+section:nth-child(14) {
+  background-image: url('../images/praca-da-moca-diadema.jpg');
+  background-attachment: fixed;
+  background-position: center bottom;
+}
+#local{
+  position: relative;
+  .wrapper{
+    z-index: 20;
+  }
+  iframe{
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.pale{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 2em;
+}
+article{
+  width: 30%;
+  margin-bottom: 2em;
+  //padding: 1em;
+  font-size: 0.9em;
+  background-color: $grey;
+  border: thin solid $light-grey;
+  border-radius: 5px;
+  p{
+    font-size: 0.9em;
+  }
+  a{
+    color: $text-yellow;
+  }
+  .title{
+    margin-bottom: 0;
+    font-family: 'antoniobold';
+    font-size: 1.55em;
+    color: $brown;
+  }
+
+}
+.twitter-link{
+  margin-bottom: 2em;
+  font-family: 'antoniobold';
+  font-size: 1.1em;
+  line-height: 1.2em;
+  color: $text-yellow;
+  text-decoration: none
+}
+.palestrante{
+  position: relative;
+  overflow: hidden;
+  > img{
+    object-fit: scale-down;
+  }
+
+}
+
+.hide {
+  position: absolute;
+  top: 70%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+  background: $light-grey;
+  transition: top 0.4s ease 0s;
+}
+.palestrante:hover .hide {
+  left: 0;
+  top: 0;
+  //-moz-transition: top 0.4s ease 0s;
+}
+
+.schedule{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 4em;
+    left: 50%;
+    border: medium solid $black;
+  }
+  &-hour{
+    position: relative;
+    display: block;
+    padding-top: .5em;
+    font-family: 'antoniobold';
+    font-size: 1.2em;
+    line-height: 2em;
+    color: $text-yellow;
+    background: $white;
+  }
+  &-title{
+    position: relative;
+    display: block;
+    font-family: 'antoniobold';
+    font-size: 1.4em;
+    line-height: 1.4em;
+    color: $brown;
+    background: $white;
+  }
+}
+dt{
+  text-align: center;
+}
+dd{
+  position: relative;
+  margin-bottom: 4em;
+  padding: 1em 0 0 0;
+  text-align: center;
+  color: $text-grey;
+  background: $white;
+}
+
+.talk{
+  margin-top: -3em;
+  p{
+    margin-bottom: 1em;
+  }
+  &-title{
+    position: relative;
+    display: block;
+    margin-bottom: .5em;
+    font-family: 'antoniobold';
+    font-size: 1.4em;
+    line-height: 1.4em;
+    color: $brown;
+  }
+  &-speaker{
+    display: block;
+    font-family: 'antoniobold';
+    font-size: 1.2em;
+    line-height: 1.4em;
+    color: $text-yellow;
+  }
+  &-link{
+    display: block;
+    font-family: 'antoniobold';
+    font-size: 1.05em;
+    line-height: 1.4em;
+    color: $text-yellow;
+    text-decoration: none;
+  }
+  &:nth-of-type(odd){
+    margin-left: 60%;
+    text-align: left;
+  }
+  &:nth-of-type(even){
+    margin-right: 60%;
+    text-align: right;
+  }
+}
+

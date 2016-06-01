@@ -1,0 +1,1 @@
+window.onscroll=function(){var e=document.querySelector("nav"),o=window.pageYOffset||document.documentElement.scrollTop;o>800?e.classList.add("fixed"):e.classList.remove("fixed")};

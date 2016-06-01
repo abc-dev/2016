@@ -1,0 +1,19 @@
+.shadow{
+  box-shadow: 1px 1px 5px rgba(62,50,3,.75);
+}
+.text-shadow{
+  text-shadow: 1px 1px 0px $white;
+}
+.button{
+  display: inline-block;
+  width: auto;
+  white-space: nowrap;
+  vertical-align: middle;
+  padding: .6em 1.2em .4em 1.2em;
+  font-family: 'antoniobold';
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 6px;
+  cursor: pointer
+}

@@ -13,14 +13,14 @@ function browserSyncTask() {
   ];
 
   browserSync.init(files, {
-    open: false,
+    open: true,
     server: {
       baseDir: './build/',
     },
   });
-
+  gulp.watch('src/*.html', ['html']);
   gulp.watch('src/scss/*.scss', ['scss']);
   gulp.watch('src/js/*.js', ['js']);
-  gulp.watch('src/js/*.js',['jshint']);
+  //gulp.watch('src/js/*.js',['jshint']);
   gulp.watch(files).on('change', browserSync.reload);
 }
