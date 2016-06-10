@@ -3,6 +3,7 @@ body{
   font-family: 'open_sansregular', Helvetica, Arial, Sans-serif;
   font-size: 20px;
   line-height: 1.2em;
+  -moz-osx-font-smoothing: grayscale;
 }
 strong{
   font-family: 'open_sanssemibold';
@@ -52,4 +53,7 @@ blockquote {
   strong{
     font-family: 'open_sanssemibold_italic';
   }
+}
+small{
+  font-size: .85em;
 }

@@ -3,12 +3,13 @@
 @import '_variables.scss';
 @import '_mixins.scss';
 @import '_text.scss';
+@import '_components.scss';
 
 
 header{
   height: 92vh;
   padding: 4.5% 0 5% 0;
-  font-family: 'antoniobold', Helvetica, Arial, Sans-serif;
+  font-family: 'antoniobold';
   color: $white;
   text-align: center;
   background-image: url('../images/igreja-matriz-sbc.jpg');
@@ -19,15 +20,12 @@ header{
   .subtitle{
     margin-bottom: .5em;
     font-size: 2.4em;
-    font-weight: lighter;
-    line-height: 1.2em;
     color: $white;
   }
   img{
-    margin-bottom: 2em;
-  }
-
+    margin-bottom: 2em;}
 }
+
 nav{
   display: flex;
   align-items: center;
@@ -38,14 +36,14 @@ nav{
   background-color: $grey;
   @extend .shadow;
   ul{
-    li{ display: inline-block;}
+    li{
+      display: inline-block;}
   }
   .logo,
   .socials{
     margin: 0 2% 0 2%;
     li{
-      margin: 0 1em 0 1em;
-    }
+      margin: 0 1em 0 1em;}
   }
 }
 .main-menu{
@@ -54,26 +52,13 @@ nav{
   text-transform: uppercase;
   li{
     margin: 0 1em 0 1em;
-    line-height: 50%;
-  }
+    line-height: 50%;}
   a{
     display: flex;
     color: $text-brown;
-    text-decoration: none;
-  }
+    text-decoration: none;}
 }
-.wrapper{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: 70%;
-  margin: 0 auto;
 
-}
-.date-time{
-  //margin: 2em 0 2em 0;
-}
 .locale{
   margin-bottom: 1.2em;
   font-family: 'antoniolight';
@@ -83,37 +68,6 @@ nav{
   color: $white;
 }
 
-.button-action{
-  @extend .button;
-  color: $white;
-  background: $yellow;
-}
-
-.button-action_big{
-  @extend .button-action;
-  font-size: 1.85em;
-}
-
-.button-action_line{
-  @extend .button;
-  font-size: 1.05em;
-  color: $text-yellow;
-  background: $white;
-  border: medium solid $text-yellow;
-}
-.fixed {
-  z-index: 20;
-  position: fixed;
-  top: 0 !important;
-}
-.subtitle{
-  margin-bottom: 1em;
-  font-family: 'antoniolight';
-  font-size: 1.6em;
-  line-height: 1.2em;
-  color: $brown;
-}
-/** **/
 section {
   height: 100vh;
   padding: 4vw;
@@ -124,29 +78,35 @@ section {
     color: $text-yellow;
   }
 }
+section#sobre,
 section#inscreva-se,
 section#palestrantes,
 section#programacao{ height: auto !important;}
 section:nth-of-type(odd) {
-  @extend .shadow;
-}
-section:nth-child(4) {
+  @extend .shadow;}
+
+//section:nth-child(4) {
+section:nth-child(6) {
   background-image: url('../images/parque-chico-mendes-scs.jpg');
   background-position: center top;
 }
-section:nth-child(6) {
+//section:nth-child(6) {
+section:nth-child(8) {
   background-image: url('../images/parque-escola-sabina-sto-andre.jpg');
   background-position: center top;
 }
-section:nth-child(8) {
+//section:nth-child(8) {
+section:nth-child(10) {
   background-image: url('../images/parque-dos-menimos-sbc.jpg');
   background-position: center bottom;
 }
-section:nth-child(10) {
+//section:nth-child(10) {
+section:nth-child(12) {
   background-image: url('../images/maps.png');
   background-position: center bottom;
 }
-section:nth-child(12) {
+//section:nth-child(12) {
+section:nth-child(14) {
   background-image: url('../images/praca-da-moca-diadema.jpg');
   background-position: center bottom;
 }
@@ -164,67 +124,92 @@ section:nth-child(12) {
     height: 100%;
   }
 }
-
-.pale{
+.choice{
   display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-bottom: 2em;
-}
-article{
-  width: 30%;
-  margin-bottom: 2em;
-  //padding: 1em;
-  font-size: 0.9em;
-  background-color: $grey;
-  border: thin solid $light-grey;
-  border-radius: 5px;
+  flex-direction: column;
+  justify-content: center;
+  @include block(30%, 1.5em, .9em);
+  transition: all 0.4s ease 0s;
+  &:hover{
+    @extend .shadow;}
+
   p{
-    font-size: 0.9em;
+    margin-bottom: 1em;
+    &:last-child{
+      text-align: center;}
   }
-  a{
-    color: $text-yellow;
-  }
-  .title{
-    margin-bottom: 0;
-    font-family: 'antoniobold';
-    font-size: 1.55em;
+
+  li{
+    margin-left: 1em;
+    margin-bottom: .5em;
+    color: $text-grey;
+    list-style-type: circle;}
+
+  &-title{
+    font-family: 'antoniolight';
+    font-size: 1.4em;
     color: $brown;
+    strong{
+      font-family: 'antonioregular';
+    }
+  }
+}
+.adress{
+  @include block(50%,2em,.9em);
+  @extend .shadow;
+  p{
+    margin-bottom: 1em;}
+  &-title{
+    font-family: 'antoniolight';
+    font-size: 1.4em;
+    color: $brown;}
+}
+
+.speaker{
+  @include block(30%,0,.9em);
+  &-title{
+    @extend .title;}
+
+  a{
+    color: $text-yellow;}
+
+  img{
+    object-fit: scale-down;}
+
+  .hide {
+    position: absolute;
+    top: 70%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+    background: $light-grey;
+    transition: top 0.4s ease 0s;
+    // &::after{
+    //   position: absolute;
+    //   top: 20%;
+    //   left: 50%;
+    //   content: "";
+    //   display: inline-block;
+    //   vertical-align: middle;
+    //   margin-right: 10px;
+    //   width: 0;
+    //   height: 0;
+    //   border-left: 8px solid transparent;
+    //   border-right: 8px solid transparent;
+    //   border-top: 8px solid lighter($text-grey,70%);
+    // }
   }
 
-}
-.twitter-link{
-  margin-bottom: 2em;
-  font-family: 'antoniobold';
-  font-size: 1.1em;
-  line-height: 1.2em;
-  color: $text-yellow;
-  text-decoration: none
-}
-.palestrante{
-  position: relative;
-  overflow: hidden;
-  > img{
-    object-fit: scale-down;
+  &:hover .hide {
+    left: 0;
+    top: 0;
+    right: 0;
+    // &::after{
+    //   border-top: none;
+    // }
   }
-
-}
-
-.hide {
-  position: absolute;
-  top: 70%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 1em;
-  background: $light-grey;
-  transition: top 0.4s ease 0s;
-}
-.palestrante:hover .hide {
-  left: 0;
-  top: 0;
-  //-moz-transition: top 0.4s ease 0s;
 }
 
 .schedule{
@@ -238,8 +223,8 @@ article{
     top: 0;
     bottom: 4em;
     left: 50%;
-    border: medium solid $black;
-  }
+    border: medium solid $black;}
+
   &-hour{
     position: relative;
     display: block;
@@ -248,8 +233,8 @@ article{
     font-size: 1.2em;
     line-height: 2em;
     color: $text-yellow;
-    background: $white;
-  }
+    background: $white;}
+
   &-title{
     position: relative;
     display: block;
@@ -257,26 +242,23 @@ article{
     font-size: 1.4em;
     line-height: 1.4em;
     color: $brown;
-    background: $white;
-  }
+    background: $white;}
 }
 dt{
-  text-align: center;
-}
+  text-align: center;}
+
 dd{
   position: relative;
   margin-bottom: 4em;
   padding: 1em 0 0 0;
   text-align: center;
   color: $text-grey;
-  background: $white;
-}
+  background: $white;}
 
 .talk{
   margin-top: -3em;
   p{
-    margin-bottom: 1em;
-  }
+    margin-bottom: 1em;}
   &-title{
     position: relative;
     display: block;
@@ -284,30 +266,29 @@ dd{
     font-family: 'antoniobold';
     font-size: 1.4em;
     line-height: 1.4em;
-    color: $brown;
-  }
+    color: $brown;}
+
   &-speaker{
     display: block;
     font-family: 'antoniobold';
     font-size: 1.2em;
     line-height: 1.4em;
-    color: $text-yellow;
-  }
+    color: $text-yellow;}
+
   &-link{
     display: block;
     font-family: 'antoniobold';
     font-size: 1.05em;
     line-height: 1.4em;
     color: $text-yellow;
-    text-decoration: none;
-  }
+    text-decoration: none;}
+
   &:nth-of-type(odd){
     margin-left: 60%;
-    text-align: left;
-  }
+    text-align: left;}
+
   &:nth-of-type(even){
     margin-right: 60%;
-    text-align: right;
-  }
+    text-align: right;}
 }
 

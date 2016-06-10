@@ -4,16 +4,35 @@
 .text-shadow{
   text-shadow: 1px 1px 0px $white;
 }
-.button{
+@mixin button($color, $bg, $font-size){
   display: inline-block;
   width: auto;
   white-space: nowrap;
   vertical-align: middle;
   padding: .6em 1.2em .4em 1.2em;
   font-family: 'antoniobold';
+  font-size: $font-size;
   line-height: 1.2em;
   text-transform: uppercase;
   text-decoration: none;
+  color: $color;
+  background-color: $bg;
   border-radius: 6px;
-  cursor: pointer
+  cursor: pointer;
+  transition: background-color 0.4s ease 0s;
+  &:hover{
+    background-color: darken($bg, 10%);
+  }
+
+}
+@mixin block($width,$padding,$font-size){
+  position: relative;
+  overflow: hidden;
+  width: $width;
+  padding: $padding;
+  margin-bottom: 2em;
+  font-size: $font-size;
+  background-color: $grey;
+  border: thin solid $light-grey;
+  border-radius: 5px;
 }
