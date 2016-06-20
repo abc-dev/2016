@@ -3,57 +3,104 @@ body{
   font-family: 'open_sansregular', Helvetica, Arial, Sans-serif;
   font-size: 20px;
   line-height: 1.2em;
-  -moz-osx-font-smoothing: grayscale;
-}
+  -moz-osx-font-smoothing: grayscale;}
+
 strong{
-  font-family: 'open_sanssemibold';
-}
+  font-family: 'open_sanssemibold';}
+
+em{
+  font-family: 'open_sansitalic';}
 h1{
-  margin-bottom: .4em;
   font-family: 'antoniobold';
   font-size: 4em;
-  line-height: 1.2em;
-}
+  //font-size: 2.2em;
+  line-height: 1.2em;}
+
 h2{
   margin-bottom: .5em;
   font-family: 'antoniolight';
-  font-size: 3.2em;
-  font-weight: lighter;
-  line-height: 1.2em;
-  color: $brown;
-  @extend .text-shadow;
-}
-h3{
-  margin-bottom: .5em;
-  font-family: 'antoniolight';
+  //font-size: 3.2em;
   font-size: 2.6em;
   font-weight: lighter;
   line-height: 1.2em;
   color: $brown;
-  @extend .text-shadow;
-}
+  //@extend .text-shadow;
+  @include text-shadow(1px,1px,0,$white);}
+
+h3{
+  margin-bottom: .5em;
+  font-family: 'antoniolight';
+  //font-size: 2.6em;
+  font-size: 2em;
+  font-weight: lighter;
+  line-height: 1.2em;
+  color: $brown;
+  @include text-shadow(1px,1px,0,$white);}
+
+h4{
+  margin-bottom: .5em;
+  font-family: 'antoniolight';
+  //font-size: 2.6em;
+  font-size: 1.8em;
+  font-weight: lighter;
+  line-height: 1.2em;
+  color: $text-brown;
+  @include text-shadow(1px,1px,0,$white);}
+
+h5{
+  margin-bottom: .5em;
+  font-family: 'antoniolight';
+  //font-size: 2.6em;
+  font-size: 1.8em;
+  font-weight: lighter;
+  line-height: 1.2em;
+  color: $text-yellow;}
+  //@include text-shadow(1px,1px,0,$white);}
+
 p{
   margin-bottom: 2em;
   line-height: 1.6em;
-  color: $text-grey;
-}
+  color: $text-grey;}
+
 time{
   font-family: 'antoniobold';
+  //font-size: 3em;
   font-size: 2em;
-  line-height: 2em;
-}
+  line-height: 1.1em;}
 
 blockquote {
   text-align: center;
   p{
   font-style: italic;
   color: $text-yellow;
-  line-height: 1.2em;
-  }
+  line-height: 1.2em;}
   strong{
-    font-family: 'open_sanssemibold_italic';
-  }
+    font-family: 'open_sanssemibold_italic';}
 }
+
 small{
-  font-size: .85em;
+  font-size: .85em;}
+
+label{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  border: 0;}
+
+input[type="text"],
+input[type="email"],
+textarea{
+  margin-bottom: 1em;
+  padding: .4em 1em;
+  font-family: 'open_sansregular';
+  font-size: 1.05em;
+  color: $text-grey;
+  border: thin solid $yellow;
+  border-radius: 6px;
 }
+input[type="submit"]{
+  float: right;
+  border: none;}

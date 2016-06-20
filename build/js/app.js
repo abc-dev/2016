@@ -1,1 +1,1 @@
-window.onscroll=function(){var e=document.querySelector("nav"),o=window.pageYOffset||document.documentElement.scrollTop;o>800?e.classList.add("fixed"):e.classList.remove("fixed")};
+!function(){window.onscroll=function(){var e=document.querySelector("nav"),n=window.pageYOffset||document.documentElement.scrollTop,o=window.innerHeight,t=e.offsetHeight,i=o-t;n>i?e.classList.add("fixed"):e.classList.remove("fixed")}}();

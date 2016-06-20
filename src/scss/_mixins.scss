@@ -1,15 +1,17 @@
-.shadow{
-  box-shadow: 1px 1px 5px rgba(62,50,3,.75);
-}
-.text-shadow{
-  text-shadow: 1px 1px 0px $white;
-}
-@mixin button($color, $bg, $font-size){
-  display: inline-block;
-  width: auto;
+@mixin shadow($x, $y, $blur){
+  box-shadow: $x $y $blur rgba(62,50,3,.75);}
+
+@mixin text-shadow($x,$y,$blur,$color){
+  text-shadow: $x $y $blur $color;}
+
+@mixin button($width, $color, $bg, $font-size){
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  width: $width;
   white-space: nowrap;
   vertical-align: middle;
-  padding: .6em 1.2em .4em 1.2em;
+  padding: .6em 1.2em .6em 1.2em;
   font-family: 'antoniobold';
   font-size: $font-size;
   line-height: 1.2em;
@@ -21,10 +23,9 @@
   cursor: pointer;
   transition: background-color 0.4s ease 0s;
   &:hover{
-    background-color: darken($bg, 10%);
-  }
-
+    background-color: darken($bg, 6%);}
 }
+
 @mixin block($width,$padding,$font-size){
   position: relative;
   overflow: hidden;
@@ -34,5 +35,4 @@
   font-size: $font-size;
   background-color: $grey;
   border: thin solid $light-grey;
-  border-radius: 5px;
-}
+  border-radius: 5px;}

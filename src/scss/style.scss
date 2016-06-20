@@ -4,54 +4,77 @@
 @import '_mixins.scss';
 @import '_text.scss';
 @import '_components.scss';
-
+@import '_modal.scss';
 
 header{
+  position: relative;
   height: 92vh;
-  padding: 4.5% 0 5% 0;
+  padding: 4% 0 5% 0;
+  //padding: 3% 0;
   font-family: 'antoniobold';
   color: $white;
   text-align: center;
   background-image: url('../images/igreja-matriz-sbc.jpg');
   background-repeat: no-repeat;
-  background-position: center bottom;
+  background-position: center right;
   background-attachment: fixed;
   background-size: cover;
   .subtitle{
     margin-bottom: .5em;
     font-size: 2.4em;
-    color: $white;
-  }
+    //font-size: 1.2em;
+    color: $white;}
+
   img{
-    margin-bottom: 2em;}
+    margin-bottom: 2em;
+    //width: 36%;
+    //margin-bottom: .5em;
+  }
+
+  h1{
+    margin-bottom: 0;
+  }
+  &::before{
+    content: 'Igreja Matriz - São Bernardo do Campo';
+    position: absolute;
+    top: 90%;
+    right: 2%;
+    font-family: 'antoniolight';
+    font-size: .85em;
+    color: $white;
+    @include text-shadow(1px,1px,0,$black);
+  }
 }
 
 nav{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-direction: row;
+  //flex-direction: row;
   width: 100%;
-  padding: .5% 0 .3% 0;
+  padding: .5% 0;
   background-color: $grey;
-  @extend .shadow;
+  @include shadow(1px,1px,5px);
   ul{
     li{
       display: inline-block;}
   }
   .logo,
   .socials{
-    margin: 0 2% 0 2%;
+    margin: 0 1% 0 1%;
     li{
-      margin: 0 1em 0 1em;}
+      //margin: 0 1em 0 1em;
+      margin: 0 .5em 0 .5em;}
   }
 }
 .main-menu{
   font-family: 'antonioregular';
   font-size: 1.2em;
+  //font-size: 1.1em;
   text-transform: uppercase;
   li{
-    margin: 0 1em 0 1em;
+    //margin: 0 .5em;
+    margin: 0 .4em;
     line-height: 50%;}
   a{
     display: flex;
@@ -60,70 +83,86 @@ nav{
 }
 
 .locale{
-  margin-bottom: 1.2em;
+  //margin-bottom: 1.2em;
+  margin-bottom: .5em;
   font-family: 'antoniolight';
   font-size: 1.4em;
+  //font-size: 1em;
   font-weight: lighter;
   line-height: 1.2em;
-  color: $white;
-}
+  color: $white;}
 
 section {
   height: 100vh;
   padding: 4vw;
+  -webkit-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   a{
-    color: $text-yellow;
-  }
+    color: $text-yellow;}
 }
 section#sobre,
 section#inscreva-se,
 section#palestrantes,
-section#programacao{ height: auto !important;}
+section#programacao,
+section#contato,
+section#patrocinadores{ height: auto !important;}
 section:nth-of-type(odd) {
-  @extend .shadow;}
+  @include shadow(1px,1px,5px);}
 
 //section:nth-child(4) {
 section:nth-child(6) {
+  position: relative;
   background-image: url('../images/parque-chico-mendes-scs.jpg');
-  background-position: center top;
-}
+  background-position: center top;}
+
 //section:nth-child(6) {
 section:nth-child(8) {
+  position: relative;
   background-image: url('../images/parque-escola-sabina-sto-andre.jpg');
-  background-position: center top;
-}
+  background-position: center top;}
+
 //section:nth-child(8) {
 section:nth-child(10) {
+  position: relative;
   background-image: url('../images/parque-dos-menimos-sbc.jpg');
-  background-position: center bottom;
-}
+  background-position: center bottom;}
+
 //section:nth-child(10) {
 section:nth-child(12) {
-  background-image: url('../images/maps.png');
-  background-position: center bottom;
-}
+  position: relative;
+  //background-image: url('../images/maps.png');
+  background-position: center bottom;}
+
 //section:nth-child(12) {
 section:nth-child(14) {
+  position: relative;
   background-image: url('../images/praca-da-moca-diadema.jpg');
-  background-position: center bottom;
-}
+  background-position: center bottom;}
+
+.legend{
+  position: absolute;
+  right: 2%;
+  top: 80%;
+  font-family: 'antoniolight';
+  color: $white;
+  @include text-shadow(1px,1px,0,$black);}
+
 #local{
   position: relative;
   .wrapper{
-    z-index: 20;
-  }
+    z-index: 20;}
+
   iframe{
     z-index: -1;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-  }
+    height: 100%;}
 }
+
 .choice{
   display: flex;
   flex-direction: column;
@@ -131,7 +170,7 @@ section:nth-child(14) {
   @include block(30%, 1.5em, .9em);
   transition: all 0.4s ease 0s;
   &:hover{
-    @extend .shadow;}
+    @include shadow(0px,0px,12px);}
 
   p{
     margin-bottom: 1em;
@@ -150,13 +189,12 @@ section:nth-child(14) {
     font-size: 1.4em;
     color: $brown;
     strong{
-      font-family: 'antonioregular';
-    }
+      font-family: 'antonioregular';}
   }
 }
 .adress{
   @include block(50%,2em,.9em);
-  @extend .shadow;
+  @include shadow(0px,0px,7px);
   p{
     margin-bottom: 1em;}
   &-title{
@@ -244,6 +282,7 @@ section:nth-child(14) {
     color: $brown;
     background: $white;}
 }
+
 dt{
   text-align: center;}
 
@@ -291,4 +330,102 @@ dd{
     margin-right: 60%;
     text-align: right;}
 }
+.sponsor-gold{
+  @include block(32%,0,.9em);
+  &:first-child{
+    margin-left: 0;}
 
+  &:last-child{
+    margin-right: 0;}
+}
+
+.sponsor-sliver{
+  @include block(23%,0,.9em);
+  margin: 0 1% 0 1%;
+  font-size: .9em;
+  &:first-child{
+    margin-left: 0;}
+
+  &:last-child{
+    margin-right: 0;}
+}
+
+.sponsor-bronze{
+  @include block(17%,0,.9em);
+  margin: 0 -2% 0 -2%;
+  font-size: .8em;
+  &:first-child{
+    margin-left: 0;}
+
+  &:last-child{
+    margin-right: 0;}
+}
+
+.sponsor-title{
+  position: relative;
+  display: block;
+  padding: .6em 1em 0em 1em;
+  font-family: 'antoniobold';
+  font-size: 1.4em;
+  line-height: 1.4em;
+  color: $brown;}
+
+.link-sponsor{
+  display: block;
+  padding: .2em 1.3em .8em 1.3em;
+  font-family: 'antoniobold';
+  font-size: 1.05em;
+  line-height: 1.4em;
+  color: $text-yellow;
+  text-decoration: none;
+  &:hover{
+    text-decoration: underline;}
+}
+.support{
+  @include block(35%,0,.9em);
+  object-fit: cover;}
+
+input[type="text"].input{
+  width: 48.7%;
+  margin-right: 1%;
+  margin-left: 0;}
+
+input[type="email"].input{
+  width: 48.7%;
+  margin-left: 1%;
+  margin-right: 0;}
+
+.input-full{
+  width: 100%;}
+
+textarea{
+  height: 5em;}
+
+#footer{
+  padding: 2em 0 .5em 0;
+  font-size: .8em;
+  background: $black;
+  p{
+    color: $light-grey;
+  }
+  a{
+    color: $text-yellow;
+    &:hover{
+      text-decoration: none;
+    }
+  }
+}
+.development{
+  width: 50%;
+  font-size: .9em;
+}
+.trusteeship{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 50%;
+  font-family: 'antoniobold';
+}
+.signature{
+  width: 100%;
+  text-align: right;}
