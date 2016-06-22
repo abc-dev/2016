@@ -3,7 +3,6 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  //width: 70%;
   margin: 0 auto;}
 
 .pale{
@@ -25,6 +24,7 @@
   color: $brown;}
 
 .subtitle{
+  text-align: center;
   margin-bottom: 1em;
   font-family: 'antoniolight';
   font-size: 1.6em;
@@ -102,29 +102,7 @@
 .emphasis{
   text-transform: uppercase;
 }
-@media (min-width: 320px) and (max-height: 480px){
-  .wrapper{
-    width: 100%;}
 
-  nav{
-    flex-direction: column;}
-
-  .main-menu{
-    display: none;}
-
-  .logo{
-    margin: 5em 0;}
-
-  .subtitle{
-    text-align: center;}
-
-  .pale{
-    flex-direction: column;}
-
-  .choice,
-  .speaker{
-    width: 100% !important;}
-}
 
 ::-webkit-input-placeholder {
   color: $yellow;
@@ -134,31 +112,11 @@
   color: $yellow;
   font-family: 'antoniobold';
 }
-
 ::-moz-placeholder {
   color: $yellow;
   font-family: 'antoniobold';
 }
-
 :-ms-input-placeholder {
   color: $yellow;
   font-family: 'antoniobold';
-}
-
-@media(min-width: 480px) and (max-width: 768px){
-
-}
-
-@media (min-width:960px) and (max-width: 1024px){
-
-}
-
-@media (min-width: 1024px) and (max-width: 1400px){
-  .wrapper{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 96%;
-    margin: 0 auto;}
 }

@@ -14,7 +14,9 @@ function browserSyncTask() {
 
   browserSync.init(files, {
     open: true,
+    port: '3000',
     server: {
+
       baseDir: './build/',
     },
   });
