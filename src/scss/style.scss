@@ -12,7 +12,7 @@
 
 header{
   position: relative;
-  height: 92vh;
+ //height: 92vh;
   padding: 4% 0 5% 0;
   //padding: 3% 0;
   font-family: 'antoniobold';
@@ -51,31 +51,45 @@ header{
 }
 
 nav{
+  position: relative;
   display: flex;
   align-items: center;
   //justify-content: space-between;
   justify-content: space-around;
   //flex-direction: row;
   width: 100%;
+  height: auto;
   padding: .5% 0;
   background-color: $grey;
+  overflow: hidden;
   @include shadow(1px,1px,5px);
   ul{
     li{
       display: inline-block;}
   }
-  .logo,
-  .socials{
-    margin: 0 1% 0 1%;
-    li{
-      //margin: 0 1em 0 1em;
-      margin: 0 .5em 0 .5em;}
-  }
 }
+
+.logo,
+.socials{
+  margin: 0 1% 0 1%;
+  li{
+    margin: 0 .5em 0 .5em;}
+}
+
 .hamburger{
-  //display: none;
+  display: none;
   width: 36px;
+  margin: 0 .5em;
+  font-family: 'antoniobold';
+  font-size: 1.2em;
+  color: $yellow;
   cursor: pointer;
+  &::before{
+    display: inline-block;
+    vertical-align: text-top;
+    margin-right: .5em;
+    content: url('../images/hamburger.svg');
+  }
 }
 .main-menu{
   font-family: 'antonioregular';
@@ -186,7 +200,8 @@ textarea{
   height: 5em;}
 
 #footer{
-  padding: 2em 0 .5em 0;
+  padding: 4vw;
+  //padding: 2em 0 .5em 0;
   font-size: .8em;
   background: $black;
   p{
@@ -214,17 +229,75 @@ textarea{
   width: 100%;
   text-align: right;}
 
+@media (max-width: 959px){
+  .hamburger{
+    display: block;
+  }
 
+}
 
-@media (min-width: 320px) and (max-height: 560px){
+@media (min-width: 320px) and (max-height: 768px){
   .wrapper{
     width: 100%;}
 
-  nav{
-    flex-direction: column;}
+  .main-menu{
+    position: absolute;
+    top: 0%;
+    left: -120%;
+    width: 100%;
+    height: auto;
+    padding: 1.2em 1em;
+    font-size: .75em;
+    text-align: right;
+    background: $grey;
+    transition: left 0.4s ease 0s;
+    overflow: hidden;
+    @include shadow(1px,1px,3px);
+    li{
+      display: block;
+      margin: 0 .3em;
+      font-size: 1.5em;
+      line-height: 2em;
+    }
+    &::after{
+      display: block;
+      padding: 100%;
+      content: '';
+      background: $grey;
+    }
+
+  }
+
+
+  li.close{
+    text-align: left;}
+
+  .hamburger{
+    flex-grow: 1;}
 
   .logo{
-    margin: 5em 0;}
+    flex-grow: 2;
+    margin: .5em 0;}
+
+  .socials{
+    position: absolute;
+    top: 0%;
+    left: -120%;
+    width: auto;
+    height: auto;
+    margin-left: 35%;
+    padding: 1.2em 1em;
+    background: $grey;
+    transition: left 0.4s ease 0s;
+    li{
+      //display: block;
+      margin: 0 .3em;
+      font-size: 1.5em;
+      line-height: 2em;
+    }
+  }
+  .showup{
+    left: 0;}
 
   .subtitle{
     text-align: center;}
@@ -239,24 +312,42 @@ textarea{
 
 
 
-@media(min-width: 480px) and (max-width: 768px){
+@media(min-width: 768px) and (max-width: 959px){
+
   .main-menu{
     position: absolute;
-    top: -100%;
+    top: -150%;
     left: 0%;
     width: 100%;
     height: auto;
-    padding: 1em 0 .9em 0;
-    font-size: .85em;
+    padding: 1.2em 1em 1em 0;
+    font-size: .75em;
+    text-align: right;
     background: $grey;
-
+    transition: top 0.4s ease 0s;
+    overflow: hidden;
+    @include shadow(1px,1px,3px);
     ul{
       li{
         display: inline-block;
         margin: 0 .3em;
+
       }
     }
   }
+  .showup{
+    top: 0;
+  }
+  .socials{
+    flex-grow: 0;
+    li{
+      margin: 0 .2em;}
+  }
+  .hamburger{
+    flex-grow: 2;}
+
+  .logo{ flex-grow: 1;}
+
   .choice{
     width: 80%;}
 
@@ -281,11 +372,7 @@ textarea{
   }
 }
 
-@media (max-width: 959px){
-  // .hamurger{
-  //   display: block;
-  // }
-}
+
 @media (min-width:960px) and (max-width: 1024px){
 
 }
