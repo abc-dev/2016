@@ -103,6 +103,30 @@
   text-transform: uppercase;
 }
 
+label{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  border: 0;}
+
+input[type="text"],
+input[type="email"],
+textarea{
+  margin-bottom: 1em;
+  padding: .4em 1em;
+  font-family: 'open_sansregular';
+  font-size: 1.05em;
+  color: $text-grey;
+  border: thin solid $yellow;
+  border-radius: 6px;}
+
+input[type="submit"]{
+  float: right;
+  border: none;
+  -webkit-appearance: none;}
 
 ::-webkit-input-placeholder {
   color: $yellow;

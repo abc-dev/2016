@@ -12,7 +12,7 @@
 
 header{
   position: relative;
- //height: 92vh;
+  height: 92vh;
   padding: 4% 0 5% 0;
   //padding: 3% 0;
   font-family: 'antoniobold';
@@ -61,7 +61,6 @@ nav{
   height: auto;
   padding: .5% 0;
   background-color: $grey;
-  overflow: hidden;
   @include shadow(1px,1px,5px);
   ul{
     li{
@@ -80,16 +79,19 @@ nav{
   display: none;
   width: 36px;
   margin: 0 .5em;
-  font-family: 'antoniobold';
-  font-size: 1.2em;
-  color: $yellow;
+  // font-family: 'antoniobold';
+  // font-size: 1.2em;
+  // color: $yellow;
   cursor: pointer;
-  &::before{
-    display: inline-block;
-    vertical-align: text-top;
-    margin-right: .5em;
-    content: url('../images/hamburger.svg');
+  img{
+    width: 36px;
   }
+  // &::before{
+  //   display: inline-block;
+  //   vertical-align: text-top;
+  //   margin-right: .5em;
+  //   content: url('../images/hamburger.svg');
+  // }
 }
 .main-menu{
   font-family: 'antonioregular';
@@ -183,16 +185,6 @@ nav{
   @include block(35%,0,.9em);
   object-fit: cover;}
 
-input[type="text"].input{
-  width: 48.7%;
-  margin-right: 1%;
-  margin-left: 0;}
-
-input[type="email"].input{
-  width: 48.7%;
-  margin-left: 1%;
-  margin-right: 0;}
-
 .input-full{
   width: 100%;}
 
@@ -201,45 +193,54 @@ textarea{
 
 #footer{
   padding: 4vw;
-  //padding: 2em 0 .5em 0;
   font-size: .8em;
   background: $black;
   p{
-    color: $light-grey;
-  }
+    color: $light-grey;}
   a{
     color: $text-yellow;
     &:hover{
-      text-decoration: none;
-    }
+      text-decoration: none;}
   }
 }
+
 .development{
-  width: 50%;
-  font-size: .9em;
-}
+  font-size: .9em;}
+
 .trusteeship{
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  width: 50%;
-  font-family: 'antoniobold';
-}
+  font-family: 'antoniobold';}
+
 .signature{
   width: 100%;
   text-align: right;}
 
 @media (max-width: 959px){
   .hamburger{
-    display: block;
-  }
-
+    display: block;}
 }
 
-@media (min-width: 320px) and (max-height: 768px){
+@media (min-width: 320px) and (max-width: 768px){
   .wrapper{
     width: 100%;}
-
+  header{
+    height: auto;
+    &::before{
+      top: 15%;
+      left: -86%;
+      font-size: .55em;
+      transform: rotate(-90deg);}
+    h1{
+    font-size: 2.2em;}
+    .subtitle{
+      font-size: 1.5em}
+    time{
+      font-size: 1.5em;}
+    .button-action_big{
+      font-size: 1em;}
+  }
   .main-menu{
     position: absolute;
     top: 0%;
@@ -251,23 +252,19 @@ textarea{
     text-align: right;
     background: $grey;
     transition: left 0.4s ease 0s;
-    overflow: hidden;
     @include shadow(1px,1px,3px);
     li{
       display: block;
       margin: 0 .3em;
       font-size: 1.5em;
-      line-height: 2em;
-    }
+      line-height: 2em;}
+
     &::after{
       display: block;
-      padding: 100%;
+      padding: 40%;
       content: '';
-      background: $grey;
-    }
-
+      background: $grey;}
   }
-
 
   li.close{
     text-align: left;}
@@ -290,7 +287,6 @@ textarea{
     background: $grey;
     transition: left 0.4s ease 0s;
     li{
-      //display: block;
       margin: 0 .3em;
       font-size: 1.5em;
       line-height: 2em;
@@ -303,38 +299,68 @@ textarea{
     text-align: center;}
 
   .pale{
-    flex-direction: column;}
+    flex-direction: row;}
 
   .choice,
-  .speaker{
+  .speaker,
+  .adress,
+  .trusteeship,
+  .development{
     width: 100%;}
+
+  .sponsor-gold{
+    width: 100%;}
+  .sponsor-sliver{
+    width: 80%;}
+  .sponsor-bronze{
+    width: 70%;}
+
+  #local{
+    height: 100%;
+    background: url(../images/maps.jpg) top no-repeat}
+
+  .adress{
+    font-family: .8em;}
+
+  .ribbon{
+    &::before,
+    &::after{
+      top: 1.6em;
+      right: -5em;}
+  }
+
+  input[type="text"].input,
+  input[type="email"].input{
+    width: 100%;
+    margin-left: 0;
+  }
 }
 
 
 
 @media(min-width: 768px) and (max-width: 959px){
 
-  .main-menu{
-    position: absolute;
-    top: -150%;
-    left: 0%;
-    width: 100%;
-    height: auto;
-    padding: 1.2em 1em 1em 0;
-    font-size: .75em;
-    text-align: right;
-    background: $grey;
-    transition: top 0.4s ease 0s;
-    overflow: hidden;
-    @include shadow(1px,1px,3px);
-    ul{
-      li{
-        display: inline-block;
-        margin: 0 .3em;
+  // .main-menu{
+  //   position: absolute;
+  //   top: -150%;
+  //   left: 0%;
+  //   width: 100%;
+  //   height: auto;
+  //   padding: 1.2em 1em 1em 0;
+  //   font-size: .75em;
+  //   text-align: right;
+  //   background: $grey;
+  //   transition: top 0.4s ease 0s;
+  //   overflow: hidden;
+  //   @include shadow(1px,1px,3px);
+  //   ul{
+  //     li{
+  //       display: inline-block;
+  //       margin: 0 .3em;
 
-      }
-    }
-  }
+  //     }
+  //   }
+  // }
   .showup{
     top: 0;
   }
@@ -372,12 +398,8 @@ textarea{
   }
 }
 
-
-@media (min-width:960px) and (max-width: 1024px){
-
-}
-
-@media (min-width: 1024px) and (max-width: 1280px){
+@media (min-width: 1024px) {
+//and (max-width: 1277px){
   .wrapper{
     display: flex;
     align-items: center;
@@ -385,17 +407,42 @@ textarea{
     flex-direction: column;
     width: 96%;
     margin: 0 auto;}
-}
-@media(min-width: 1280px) and (max-width: 1440px){
-  .talk{
-    &:nth-of-type(odd){
-      margin-left: 60%;
-      text-align: left;}
 
-    &:nth-of-type(even){
-      margin-right: 60%;
-      text-align: right;}
-  }
+    .main-menu li {
+      margin: 0 .4em;
+      line-height: 50%;}
+
+    .talk{
+      &:nth-of-type(odd){
+        margin-left: 60%;
+        text-align: left;}
+
+      &:nth-of-type(even){
+        margin-right: 60%;
+        text-align: right;}
+    }
+
+    input[type="text"].input{
+      width: 48.7%;
+      margin-right: 1%;
+      margin-left: 0;}
+
+    input[type="email"].input{
+      width: 48.7%;
+      margin-left: 1%;
+      margin-right: 0;}
+
+  .trusteeship,
+  .development{
+    width: 50%;}
+}
+@media(min-width: 1277px) {
+//and (max-width: 1440px){
+  .main-menu li {
+    margin: 0 .4em;
+    line-height: 50%;}
+
+
   .sponsor{
     &-gold{
       width: 32%;
@@ -425,7 +472,12 @@ textarea{
   }
 
 }
-@media (min-width: 1400px) and (max-width: 2000px){
+@media (min-width: 1400px){
+//} and (max-width: 2000px){
+  .wrapper{
+    width: 90%;}
+}
+@media (min-width: 1600px){//} and (max-width: 2000px){
   .wrapper{
     width: 65%;}
 }
