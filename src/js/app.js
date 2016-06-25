@@ -19,7 +19,12 @@
   var mainMenu = document.querySelector('.main-menu');
   var socials = document.querySelector('.socials');
   var linkMenu = mainMenu.querySelectorAll('a');
+
+  var link = document.querySelector('a[href="#code-of-conduct"]');
+
   if (mediaQuery.matches) {
+    link.href = 'codigo-de-conduta';
+
     var li = document.createElement('li');
     li.classList.add('close');
     var span = document.createElement('span');

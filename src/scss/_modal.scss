@@ -1,9 +1,9 @@
 .btn-close {
   position: absolute;
-  right: -10%;
-  top: 0%;
+  right: 2%;
+  top: 2%;
   z-index: 40;
-  color: $white;
+  color: $text-yellow;
   font-size: 18px;
   font-family: 'open_sansbold';
   text-decoration: none;
@@ -47,22 +47,19 @@
 }
 .modal:target .modal-dialog {
   transform: scale(1);
-  //transform: translate(0,0);
   top: 2%;
 }
 .modal-dialog {
   background: #fefefe;
   border: #333333 solid 1px;
   border-radius: 5px;
-  margin-left: -200px;
+  margin-left: -15%;
   position: fixed;
   left: 25%;
   top: -100%;
   z-index: 30;
   width: 80%;
-  //transform: translate(0, -500%);
   transform: scale(0);
-  //transition: transform 0.3s ease-out;
   transition: transform 0.2s ease-out;
 }
 .modal-body {
@@ -75,14 +72,16 @@
   padding: 10px 20px;
 }
 .modal-header {
-  border-bottom: #eeeeee solid 1px;
-}
-.modal-header h2 {
-  font-size: 20px;
+  position: relative;
+  //border-bottom: #eeeeee solid 1px;
+  h2 {
+    font-size: 20px;}
+
 }
 .modal-footer {
   border-top: #eeeeee solid 1px;
-  p,a{
+  p,
+  a{
     margin-bottom: .1em;
     text-align: right;
     font-style: italic;
