@@ -20,9 +20,9 @@ function scssTask() {
     .src(['src/scss/**/[^_]*.scss'])
     .pipe(plumber())
     .pipe(sass().on('error', notify.onError('Deu ruim: <%= error.message %>')))
-    .pipe(gulp.dest('build/css'))
     .pipe(autoprefixer(autoprefixerOptions))
     .pipe(cssnano())
     .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('build/css'))
     .pipe(notify('CSS OK!'));
 }
