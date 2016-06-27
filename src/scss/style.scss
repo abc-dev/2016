@@ -10,7 +10,7 @@
 @import '_schedule.scss';
 @import '_sponsor.scss';
 
-header{
+#header{
   position: relative;
   height: 92vh;
   padding: 4% 0 5% 0;
@@ -107,7 +107,6 @@ nav{
     color: $text-brown;
     text-decoration: none;}
 }
-
 .locale{
   //margin-bottom: 1.2em;
   margin-bottom: .5em;
@@ -335,7 +334,6 @@ textarea{
     margin-left: 0;
   }
 }
-
 
 
 @media(min-width: 768px) and (max-width: 959px){
