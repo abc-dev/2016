@@ -23,13 +23,13 @@
   var link = document.querySelector('a[href="#code-of-conduct"]');
 
   if (mediaQuery.matches) {
-    link.href = 'codigo-de-conduta';
+    link.href = 'codigo-de-conduta.html';
 
     var li = document.createElement('li');
     li.classList.add('close');
     var span = document.createElement('span');
     var img = document.createElement('img');
-    img.src = '../images/close.svg';
+    img.src = 'images/close.svg';
 
     span.appendChild(img);
     li.appendChild(span);
