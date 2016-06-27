@@ -12,8 +12,8 @@ script:
 - npm i
 - gulp html js scss
 - mkdir .deploy
-- cp -R build /.deploy
-- cd ./deploy
+- cp -R build .deploy
+- cd .deploy
 - git init
 - git add --all
 - git commit -m "Update site via Travis-CI"
