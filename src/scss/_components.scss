@@ -144,3 +144,10 @@ input[type="submit"]{
   color: $yellow;
   font-family: 'antoniobold';
 }
+
+/*
+* Formspree Params
+*/
+
+input[name="_gotcha"]{
+  display: none;}
