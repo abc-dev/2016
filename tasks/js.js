@@ -12,7 +12,7 @@ gulp.task('js', jsTask);
 function jsTask() {
   return gulp
     .src(['src/js/**/*.js'])
-    // .pipe(plumber())
+    .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(babel())
     .pipe(uglify())
