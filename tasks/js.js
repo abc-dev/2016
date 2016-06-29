@@ -12,11 +12,11 @@ gulp.task('js', jsTask);
 function jsTask() {
   return gulp
     .src(['src/js/**/*.js'])
-    .pipe(plumber())
+    // .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(babel())
     .pipe(uglify())
-    .pipe(gulp.dest('build/js'))
     .pipe(sourcemaps.write('.', {sourceRoot: '/build/js/'}))
+    .pipe(gulp.dest('build/js'))
     .pipe(notify('JS nice!'));
 };
