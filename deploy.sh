@@ -6,8 +6,8 @@ RED='\033[00;31m'
 GREEN='\033[00;32m'
 YELLOW='\e[0;33m'
 
-echo "${RED}Baixando dependências"
-npm i
+# echo "${RED}Baixando dependências"
+# npm i
 
 echo "${YELLOW}Gerando o projeto"
 gulp html js scss
@@ -15,6 +15,7 @@ gulp html js scss
 echo "${RED}Fazendo o deploy"
 rm -rf .deploy
 mkdir .deploy
+cp src/CNAME .deploy
 cp -R build/* .deploy
 cd .deploy
 git init
