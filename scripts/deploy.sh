@@ -1,18 +1,17 @@
-#!/bin/bash
+# #!/bin/bash
 
 # Colors
 DEFAULT='\033[0m'
 RED='\033[00;31m'
 GREEN='\033[00;32m'
-YELLOW='\e[0;33m'
 
 # echo "${RED}Baixando dependências"
 # npm i
 
-echo "${YELLOW}Gerando o projeto"
+echo "Gerando o projeto"
 npm run build
 
-echo "${RED}Fazendo o deploy"
+echo "${RED}Fazendo o deploy${DEFAULT}"
 rm -rf .deploy
 mkdir .deploy
 cp src/CNAME .deploy
