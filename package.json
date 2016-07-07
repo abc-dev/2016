@@ -4,7 +4,10 @@
   "description": "Website do evento ABCDev (#1 ABCDev 2016)",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp html js scss copy server",
+    "deploy": "scripts/deploy.sh",
+    "build": "gulp html js scss copy"
   },
   "repository": {
     "type": "git",
