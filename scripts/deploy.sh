@@ -10,7 +10,7 @@ YELLOW='\e[0;33m'
 # npm i
 
 echo "${YELLOW}Gerando o projeto"
-gulp html js scss
+npm run build
 
 echo "${RED}Fazendo o deploy"
 rm -rf .deploy
