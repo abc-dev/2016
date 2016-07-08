@@ -5,9 +5,9 @@
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp html js scss copy server",
-    "deploy": "chmod u+x scripts/deploy.sh && scripts/deploy.sh",
-    "build": "gulp html js scss copy"
+    "start": "scripts/start",
+    "deploy": "scripts/deploy",
+    "build": "scripts/build"
   },
   "repository": {
     "type": "git",
