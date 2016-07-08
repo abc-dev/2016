@@ -7,5 +7,3 @@ require('./tasks/lint.js');
 require('./tasks/scss.js');
 require('./tasks/copy.js');
 require('./tasks/server.js');
-require('./tasks/build.js');
-require('./tasks/default.js');
