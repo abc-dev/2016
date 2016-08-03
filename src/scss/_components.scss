@@ -66,7 +66,6 @@
   text-decoration: none;
   text-indent: -999999px;
   pointer-events: none;
-  cursor: ponter;
   &:hover{
     pointer-events: auto;
     cursor: pointer;}
@@ -82,9 +81,7 @@
     //top: 1.5em;
     //right: -5em;
     //cursor: pointer;
-    transform: rotate(45deg);
-    pointer-events: auto;
-  }
+    transform: rotate(45deg);}
 
   &::before{
     content: "";
@@ -147,10 +144,3 @@ input[type="submit"]{
   color: $yellow;
   font-family: 'antoniobold';
 }
-
-/*
-* Formspree Params
-*/
-
-input[name="_gotcha"]{
-  display: none;}

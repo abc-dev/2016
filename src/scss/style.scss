@@ -10,7 +10,7 @@
 @import '_schedule.scss';
 @import '_sponsor.scss';
 
-#header{
+header{
   position: relative;
   height: 92vh;
   padding: 4% 0 5% 0;
@@ -107,6 +107,7 @@ nav{
     color: $text-brown;
     text-decoration: none;}
 }
+
 .locale{
   //margin-bottom: 1.2em;
   margin-bottom: .5em;
@@ -336,6 +337,7 @@ textarea{
 }
 
 
+
 @media(min-width: 768px) and (max-width: 959px){
 
   // .main-menu{
@@ -474,6 +476,8 @@ textarea{
 //} and (max-width: 2000px){
   .wrapper{
     width: 90%;}
+    .support{
+      @include block(15%,0,.9em);}
 }
 @media (min-width: 1600px){//} and (max-width: 2000px){
   .wrapper{
