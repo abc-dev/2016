@@ -379,7 +379,7 @@ textarea{
 
   .speaker{
     width: 48%;
-    font-size: .9em;
+    font-size: .8em;
     .hide {
       padding: .6em;}
   }
@@ -470,6 +470,9 @@ textarea{
         margin-right: 0;}
     }
   }
+
+  .support{
+    @include block(15%,0,.9em);}
 
 }
 @media (min-width: 1400px){
