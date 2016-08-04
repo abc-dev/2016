@@ -1,7 +1,12 @@
 .speaker{
   @include block(30%,0,.9em);
   &-title{
-    @extend .title;}
+    @extend .title;
+    margin-bottom: 1em;}
+
+  p{
+    margin-bottom: .5em;
+    font-size: .9em;}
 
   a{
     color: $text-yellow;}
@@ -11,7 +16,7 @@
 
   .hide {
     position: absolute;
-    top: 70%;
+    top: 73%;
     left: 0;
     right: 0;
     width: 100%;
