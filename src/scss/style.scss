@@ -68,6 +68,11 @@ nav{
   }
 }
 
+.brand-logo {
+  margin: 20px;
+  width: 75%;
+}
+
 .logo,
 .socials{
   margin: 0 1% 0 1%;
@@ -339,28 +344,9 @@ textarea{
 
 
 @media(min-width: 768px) and (max-width: 959px){
-
-  // .main-menu{
-  //   position: absolute;
-  //   top: -150%;
-  //   left: 0%;
-  //   width: 100%;
-  //   height: auto;
-  //   padding: 1.2em 1em 1em 0;
-  //   font-size: .75em;
-  //   text-align: right;
-  //   background: $grey;
-  //   transition: top 0.4s ease 0s;
-  //   overflow: hidden;
-  //   @include shadow(1px,1px,3px);
-  //   ul{
-  //     li{
-  //       display: inline-block;
-  //       margin: 0 .3em;
-
-  //     }
-  //   }
-  // }
+  .brand-logo {
+    width: 30%;
+  }
   .showup{
     top: 0;
   }
@@ -400,6 +386,9 @@ textarea{
 
 @media (min-width: 1024px) {
 //and (max-width: 1277px){
+  .brand-logo {
+    width: 30%;
+  }
   .wrapper{
     display: flex;
     align-items: center;
