@@ -1,0 +1,5 @@
+node_modules
+.deploy
+build
+.DS_Store
+npm-debug.log

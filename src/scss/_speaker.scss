@@ -1,0 +1,34 @@
+.speaker{
+  @include block(30%,0,.9em);
+  &-title{
+    @extend .title;
+    margin-bottom: 1em;}
+
+  p{
+    margin-bottom: .5em;
+    font-size: .9em;}
+
+  a{
+    color: $text-yellow;}
+
+  img{
+    object-fit: scale-down;}
+
+  .hide {
+    position: absolute;
+    top: 73%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+    background: $light-grey;
+    transition: top 0.4s ease 0s;
+  }
+
+  &:hover .hide {
+    left: 0;
+    top: 0;
+    right: 0;
+  }
+}
