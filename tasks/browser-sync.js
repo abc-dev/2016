@@ -13,7 +13,7 @@ function browserSyncTask() {
   ];
 
   browserSync.init(files, {
-    open: true,
+    open: false,
     port: '3000',
     server: {
       baseDir: './build/',
