@@ -23,5 +23,6 @@ git commit -m "Update site via deploy.sh"
 git remote add origin git@github.com:abc-dev/2016.git
 git fetch origin
 git checkout gh-pages
+git pull
 git merge master
 git push origin gh-pages
