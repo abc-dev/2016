@@ -209,7 +209,8 @@ textarea{
   font-size: .8em;
   background: $black;
   p{
-    color: $light-grey;}
+    color: $light-grey;
+    margin: 0;}
   a{
     color: $text-yellow;
     &:hover{
