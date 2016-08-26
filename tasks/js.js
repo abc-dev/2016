@@ -3,7 +3,6 @@
 let gulp = require('gulp');
 let plumber = require('gulp-plumber');
 let uglify = require('gulp-uglify');
-let notify = require('gulp-notify');
 let sourcemaps = require('gulp-sourcemaps');
 let babel = require('gulp-babel');
 
@@ -17,6 +16,5 @@ function jsTask() {
     .pipe(babel())
     .pipe(uglify())
     .pipe(sourcemaps.write('.', {sourceRoot: '/build/js/'}))
-    .pipe(gulp.dest('build/js'))
-    .pipe(notify('JS nice!'));
+    .pipe(gulp.dest('build/js'));
 };

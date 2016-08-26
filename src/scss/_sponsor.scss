@@ -1,8 +1,10 @@
 .sponsor{
   &-gold{
     @include block(32%,0,.9em);
+    max-width: 20rem;
+    padding: 10px;
     &:first-child{
-      margin-left: 0;}
+        margin-left: 0;}
 
     &:last-child{
       margin-right: 0;}
@@ -24,16 +26,24 @@
   &-title{
     position: relative;
     display: block;
-    padding: .6em 1em 0em 1em;
+    padding: 5px 0 5px 0;
     font-family: 'antoniobold';
     font-size: 1.4em;
-    line-height: 1.4em;
     color: $brown;}
+
+    &-brand-image {
+      border-bottom: 1px solid #9E9E9E;
+      padding-bottom: 5px;
+      margin-bottom: 5px;
+      min-height: 110px;
+      display: flex;
+      justify-content: center;
+      align-items: center;}
 }
 
 .link-sponsor{
   display: block;
-  padding: .2em 1.3em .8em 1.3em;
+  padding: 5px 0 5px 0;
   font-family: 'antoniobold';
   font-size: 1.05em;
   line-height: 1.4em;
