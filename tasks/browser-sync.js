@@ -22,6 +22,7 @@ function browserSyncTask() {
   gulp.watch('src/*.html', ['html']);
   gulp.watch('src/scss/*.scss', ['scss']);
   gulp.watch('src/js/*.js', ['js']);
+  gulp.watch('src/images/**/*', ['copy']);
   //gulp.watch('src/js/*.js',['jshint']);
-  gulp.watch(files).on('change', browserSync.reload);
+  // gulp.watch(files).on('change', browserSync.reload);
 }

@@ -192,6 +192,10 @@ nav{
 
 .support{
   @include block(35%,0,.9em);
+  background-color: white!important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   object-fit: cover;}
 
 .input-full{
@@ -205,7 +209,8 @@ textarea{
   font-size: .8em;
   background: $black;
   p{
-    color: $light-grey;}
+    color: $light-grey;
+    margin: 0;}
   a{
     color: $text-yellow;
     &:hover{

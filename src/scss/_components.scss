@@ -43,7 +43,8 @@
   @include button(auto, $white, $yellow, 1em);}
 
 .button-action_medium{
-  @include button(auto, $white, $yellow, 1.25em);}
+  @include button(auto, $white, $yellow, 1.25em);
+  margin-bottom: 20px;}
 
 .button-action_big{
   @include button(auto, $white, $yellow, 1.7em);}

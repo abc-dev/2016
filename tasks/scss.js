@@ -6,7 +6,6 @@ let sass = require('gulp-sass');
 let autoprefixer = require('gulp-autoprefixer');
 let cssnano = require('gulp-cssnano');
 let rename = require('gulp-rename');
-let notify = require('gulp-notify');
 
 gulp.task('scss', scssTask);
 
@@ -19,10 +18,9 @@ function scssTask() {
   return gulp
     .src(['src/scss/**/[^_]*.scss'])
     .pipe(plumber())
-    .pipe(sass().on('error', notify.onError('Deu ruim: <%= error.message %>')))
+    .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer(autoprefixerOptions))
     .pipe(cssnano())
     .pipe(rename({suffix: '.min'}))
-    .pipe(gulp.dest('build/css'))
-    .pipe(notify('CSS OK!'));
+    .pipe(gulp.dest('build/css'));
 }
