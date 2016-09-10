@@ -11,8 +11,10 @@
 
     &__header {
       background: #fff;
-      text-align: center;
       height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     &__logo {
@@ -45,15 +47,6 @@
     font-size: 1.4em;
     line-height: 1.4em;
     color: $brown;}
-
-    // &-brand-image {
-    //   border-bottom: 1px solid #9E9E9E;
-    //   padding-bottom: 5px;
-    //   margin-bottom: 5px;
-    //   min-height: 110px;
-    //   display: flex;
-    //   justify-content: center;
-    //   align-items: center;}
 }
 
 .link-sponsor{
